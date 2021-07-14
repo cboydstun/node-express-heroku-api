@@ -6,6 +6,6 @@ const NoteSchema = new Schema({
     content: { type: String, required: true },
     created: { type: Date, default: Date.now },
     updated: { type: Date, default: Date.now },
-}, { timeStamp: true });
+}, { timestamps: true });
 
 module.exports = mongoose.model('Note', NoteSchema);
