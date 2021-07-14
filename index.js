@@ -24,10 +24,10 @@ mongoose.connect(process.env.MONGO_URL, {
 }).then(console.log("Connected to MongoDB")).catch((err)=>{console.log(err)})
 
 //import routes
-
+const noteRoute = require('./routes/notes')
 
 //initalize routes
-
+app.use('/api', noteRoute)
 
 //basic greeting
 app.get('/', (req, res) => {res.send('Hello World!')})
